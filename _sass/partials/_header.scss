@@ -1,0 +1,51 @@
+// *************************************
+//
+//   Header styles
+//
+// *************************************
+
+header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: $mid-grey;
+  font-weight: 700;
+  font-size: 1rem;
+
+  span {
+    color: $mid-blue;
+  }
+}
+
+nav {
+  place-self: end;
+
+  ul {
+    display: inline-block;
+    list-style-type: none;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 0.7rem;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+
+        &:hover, &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.social {
+      margin-left: 2rem;
+    }
+  }
+}

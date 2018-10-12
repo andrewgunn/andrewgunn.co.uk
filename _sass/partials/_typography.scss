@@ -1,0 +1,81 @@
+// *************************************
+//
+//   Typography styles
+//
+// *************************************
+
+a {
+  color: $dark-blue;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5
+.h1, .h2, .h3, .h4, .h5 {
+  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: $mid-blue;
+
+  a {
+    color: $mid-blue;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color: $dark-blue;
+    }
+  }
+}
+
+h1, .h1 {
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+h2, .h2 {
+  font-size: 1.6rem;
+}
+
+h3, .h3 {
+  font-size: 1.4rem;
+}
+
+h4, .h4 {
+  font-size: 1.4rem;
+}
+
+h5, .h5 {
+  font-size: 1.2rem;
+}
+
+em {
+	font-style: italic;
+}
+
+.meta {
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-size: 0.7rem;
+	text-align: center;
+	color: $light-grey;
+
+	span {
+		padding: 0 0.25rem;
+		color: $mid-blue;
+	}
+
+	.tag {
+		margin-right: 0.25rem;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+
+code {
+	font-family: "Roboto Mono", "Courier New", monospace;
+	font-size: 0.9rem;
+	color: $mid-blue;
+	background: $off-white;
+}

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+  <p class="meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+    {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}{{ page.date | date: date_format }}</time><span>//</span>Tagged; {% for tag in page.tags %}{% capture tag_name %}{{ tag }}{% endcapture %}<a class="tag" href="/tag/{{ tag_name }}">{{ tag_name }}</a>{% endfor %}<span>//</span>13 minute read
+  </p>
+
+  <div itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if page.author -%}
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+  {%- endif -%}
+
+  <a href="{{ page.url | relative_url }}" hidden></a>
+</article>

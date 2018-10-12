@@ -1,0 +1,48 @@
+// *************************************
+//
+//   Base styles
+//
+// *************************************
+
+// Colours
+$white: #FFF;
+$off-white: #EEE;
+$light-grey: #909090;
+$mid-grey: #707070;
+$dark-grey: #606060;
+$mid-blue: #404B69;
+$dark-blue: #283149;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Libre+Franklin:600|Roboto+Mono|Roboto:400,400i');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  font-size: 20px;
+
+  @media screen and (max-width: 400px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  background: $white;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-weight: 400;
+  color: $dark-grey;
+  transition: all 0.5s ease;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+
+  @media screen and (max-width: 400px) {
+    line-height: 1.6;
+  }
+}
+
