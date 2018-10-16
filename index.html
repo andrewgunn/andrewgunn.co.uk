@@ -2,32 +2,11 @@
 layout: default
 ---
 
-<!-- {% assign index = true %}
-<div itemscope itemtype="http://schema.org/Blog">
-{% for post in paginator.posts %}
-{% unless post.redirect %}
-{% assign content = post.content %}
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-        {% include article.html %}
-    </article>
-{% endunless %}
-{% endfor %}
-</div>
-<nav id="pagenavi">
-    {% if paginator.previous_page %}
-        <a href="{{- paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' -}}" class="prev">Prev</a>
-    {% endif %}
-    {% if paginator.next_page %}
-        <a href="{{- paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' -}}" class="next">Next</a>
-    {% endif %}
-    <div class="center"><a href="/archive">Blog Archives</a></div>
-</nav> -->
-
-<section class="home">
+<section class="home" itemscope itemtype="http://schema.org/Blog">
 {%- if site.posts.size > 0 -%}
 
     {%- for post in site.posts -%}
-    <article class="post">
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <h1>
             <a href="{{ post.url | relative_url }}">
                 {{ post.title | escape }}
@@ -39,28 +18,21 @@ layout: default
 
         <p>{{ post.excerpt }}</p>
 
-        <a class="read-more" href="{{ post.url | relative_url }}">Read more&hellip;</a>
+        <a class="read-more" href="{{ post.url | relative_url }}">Read more&hellip; &rarr;</a>
     </article>
     {%- endfor -%}
 
-<!--     <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul> -->
-
 {%- endif -%}
+
+<nav id="pagenavi">
+    {% if paginator.previous_page %}
+        <a href="{{- paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' -}}" class="prev">Prev</a>
+    {% endif %}
+    {% if paginator.next_page %}
+        <a href="{{- paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' -}}" class="next">Next</a>
+    {% endif %}
+    <div class="center"><a href="/archive">Blog Archive</a></div>
+</nav>
 </section>
 
 

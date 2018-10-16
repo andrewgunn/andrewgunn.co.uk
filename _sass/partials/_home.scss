@@ -9,10 +9,5 @@ section.home {
 		border-bottom: 1px solid $off-white;
 		margin-bottom: 2rem;
 		padding-bottom: 2rem;
-
-		&:last-of-type {
-			border-bottom: 0;
-			padding-bottom: 0;
-		}
 	}
 }
