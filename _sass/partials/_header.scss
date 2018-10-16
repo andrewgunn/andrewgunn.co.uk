@@ -8,6 +8,10 @@ header {
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 0.5rem 1rem;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 }
 
 .logo {
@@ -34,6 +38,7 @@ nav {
 
     li {
       display: inline-block;
+      margin-right: 0.75rem;
 
       a {
         text-decoration: none;
@@ -45,7 +50,16 @@ nav {
     }
 
     &.social {
-      margin-left: 2rem;
+      margin-left: 1rem;
+
+      li {
+        margin-left: 0.25rem;
+        margin-right: 0;
+      }
+
+      svg {
+        vertical-align: middle;
+      }
     }
   }
 }

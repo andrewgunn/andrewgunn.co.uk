@@ -12,11 +12,12 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5
-.h1, .h2, .h3, .h4, .h5 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
   font-weight: 600;
   color: $mid-blue;
+  line-height: 1.2;
 
   a {
     color: $mid-blue;
@@ -49,8 +50,16 @@ h5, .h5 {
   font-size: 1.2rem;
 }
 
+h6, .h6 {
+  font-size: 0.7rem;
+}
+
 em {
 	font-style: italic;
+}
+
+p {
+	margin: 1rem 0;
 }
 
 .meta {
@@ -65,11 +74,7 @@ em {
 	}
 
 	.tag {
-		margin-right: 0.25rem;
-
-		&:last-of-type {
-			margin-right: 0;
-		}
+		margin-left: 0.25rem;
 	}
 }
 
