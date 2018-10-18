@@ -14,7 +14,7 @@ $mid-blue: #404B69;
 $dark-blue: #283149;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Libre+Franklin:600|Roboto+Mono|Roboto:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Alegreya:500');
 
 * {
   box-sizing: border-box;
@@ -25,21 +25,21 @@ html {
   font-size: 20px;
 
   @media screen and (max-width: 400px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 body {
   background: $white;
-  font-family: "Libre Baskerville", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
   font-weight: 400;
   color: $dark-grey;
-  transition: all 0.5s ease;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.8;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 
   @media screen and (max-width: 400px) {
     line-height: 1.6;

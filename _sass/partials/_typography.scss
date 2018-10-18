@@ -14,8 +14,8 @@ a {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-family: "Alegreya", Georgia, "Times New Roman", serif;
+  font-weight: 500;
   color: $mid-blue;
   line-height: 1.2;
 
@@ -51,7 +51,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 0.7rem;
+  font-size: 0.925rem;
 }
 
 em {
@@ -63,7 +63,7 @@ p {
 }
 
 .meta {
-	font-family: "Roboto", Helvetica, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-size: 0.7rem;
 	text-align: center;
 	color: $light-grey;
@@ -79,7 +79,7 @@ p {
 }
 
 code {
-	font-family: "Roboto Mono", "Courier New", monospace;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 	font-size: 0.9rem;
 	color: $mid-blue;
 	background: $off-white;
