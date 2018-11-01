@@ -42,23 +42,6 @@ article.post {
 							 "author";
 	}
 
-	.author-details {
-		grid-area: author;
-		display: grid;
-		grid-template-columns: 15% 80%;
-		grid-column-gap: 5%;
-
-		div:first-child {
-			align-self: center;
-
-			img {
-				max-width: 80px;
-				width: 100%;
-				border-radius: 50%;
-			}
-		}
-	}
-
 	h6 {
 		margin: 0;
 	}
@@ -80,7 +63,7 @@ article.post {
 		}
 
 		ul {
-			margin: 0 0 0 0.5rem;
+			margin: -2px 0 0 0.5rem;
 			list-style-type: none;
 			padding: 0;
 			float: left;

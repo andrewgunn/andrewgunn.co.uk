@@ -1,0 +1,16 @@
+{%- assign wordCount = page.content | strip_html | number_of_words -%}
+    {%- assign minutes_f =  -%}
+{%- assign minutes = wordCount | divided_by: 200 -%}
+{%- if wordCount | divided_by: 200.0 | minus: minutes >= 0.5 -%}
+    {%- assign minutes = minutes + 1 -%}
+{%- else -%}
+    {%- assign minutes = minutes -%}
+{%- endif -%}
+
+{%- if minutes <= 1 -%}
+    {%- assign readingTime = '1' | append: ' minute' -%}
+{%- else -%}
+    {%- assign readingTime = minutes | append: ' minutes' -%}
+{%- endif -%}
+
+{{- readingTime -}}

@@ -15,10 +15,17 @@ header {
 }
 
 .logo {
-  text-decoration: none;
   color: $mid-grey;
-  font-weight: 700;
   font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  img {
+    border-radius: 50%;
+    margin: 0 1rem -8px 0;
+    max-width: 28px;
+    width: 100%;
+  }
 
   span {
     color: $mid-blue;

@@ -26,10 +26,10 @@ layout: default
 
 <nav id="pagenavi">
     {% if paginator.previous_page %}
-        <a href="{{- paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' -}}" class="prev">Prev</a>
+        <a href="{{- paginator.previous_page_path | replace: '//', '/' | replace: 'index.html', '' -}}" class="prev">Prev</a>
     {% endif %}
     {% if paginator.next_page %}
-        <a href="{{- paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' -}}" class="next">Next</a>
+        <a href="{{- paginator.next_page_path | replace: '//', '/' -}}" class="next">Next</a>
     {% endif %}
     <div class="center"><a href="/archive">Blog Archive</a></div>
 </nav>

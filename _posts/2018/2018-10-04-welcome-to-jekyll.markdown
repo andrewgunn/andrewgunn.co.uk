@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2018-10-04 19:57:22 +0100
-tags: jekyll update
+title: Welcome to Jekyll!
+date: 2018-10-04 19:57:22 +0100
+tags: 
+- jekyll
+- update
 excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in tortor dignissim ligula rhoncus ornare. Maecenas urna sem, efficitur sed mattis ut, efficitur quis tortor. Nam elementum, turpis at viverra aliquet, nisi erat ultrices augue, ut ullamcorper mi ante eget sem. Donec volutpat felis enim, quis aliquet augue ullamcorper vitae.
 ---
 
