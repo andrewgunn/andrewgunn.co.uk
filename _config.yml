@@ -6,6 +6,8 @@ gitHubUsername:  andrewgunn
 linkedInUsername:  andrewgunnrazor
 twitterUsername: andrewgunn
 
+googleAnalyticsTrackingId: 
+
 # Build settings
 markdown: kramdown
 theme: minima

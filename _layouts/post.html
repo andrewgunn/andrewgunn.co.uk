@@ -9,7 +9,7 @@ layout: default
     {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}{{- page.date | date: date_format -}}</time>
     {%- if page.tags != empty -%}
     <span>//</span>
-    Tagged; {%- for tag in page.tags -%}{%- capture tag_name -%}{{- tag -}}{%- endcapture -%}<a class="tag" href="/tag/{{ tag_name }}">{{- tag_name -}}</a>{%- endfor -%}
+    <i class="fa fa-tag"></i> {%- for tag in page.tags -%}{%- capture tag_name -%}{{- tag -}}{%- endcapture -%}<a class="tag" href="/tag/{{ tag_name }}">{{- tag_name -}}</a>{%- endfor -%}
     {%- endif -%}
     <span>//</span>
     {%- include reading-time.html -%}
