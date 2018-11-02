@@ -10,11 +10,20 @@ footer {
   display: grid;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 0.75rem;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 33.3% 33.3% 33.3%;
   padding: 1rem;
+
+  a {
+    color: $white;
+  }
 
   p {
     margin: 0;
+    text-align: center;
+
+    &:first-child {
+      text-align: left;
+    }
 
     &:last-child {
       text-align: right;

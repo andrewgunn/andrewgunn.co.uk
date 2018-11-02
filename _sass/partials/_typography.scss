@@ -62,15 +62,22 @@ p {
 	margin: 1rem 0;
 }
 
-.meta {
-	color: $light-grey;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 0.75rem;
-	text-align: center;
+blockquote{
+  background: #eee;
+  border-left: 8px solid #bbb;
+  font-style: italic;
+  margin: 1rem 0 0;
+  padding: 1rem;
+  position: relative;
+  
+  p {
+    margin: 0;
+  }
 
-	span {
-		color: $mid-blue;
-		padding: 0 0.25rem;
+  cite {
+    display: block;
+    font-weight: bold;
+    margin-top: 1em;
   }
 }
 
