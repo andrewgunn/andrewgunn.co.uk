@@ -1,17 +1,17 @@
-{% assign rawTags = "" %}
-{% for post in site.posts %}
-  {% assign rawTags = rawTags | post.tags | join:'|' | append:'|' %}
-{% endfor %}
-{% assign rawTags = rawTags | split:'|' | sort %}
+{%- assign rawTags = "" -%}
+{%- for post in site.posts -%}
+  {%- assign rawTags = rawTags | post.tags | join:'|' | append:'|' -%}
+{%- endfor -%}
+{%- assign rawTags = rawTags | split:'|' | sort -%}
 
-{% assign site.tags = "" %}
-{% for tag in rawTags %}
-  {% if tag != "" %}
-    {% if tags == "" %}
-      {% assign tags = tag | split:'|' %}
-    {% endif %}
-    {% unless tags contains tag %}
-      {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
-    {% endunless %}
-  {% endif %}
-{% endfor %}
+{%- assign site.tags = "" -%}
+{%- for tag in rawTags -%}
+  {%- if tag != "" -%}
+    {%- if tags == "" -%}
+      {%- assign tags = tag | split:'|' -%}
+    {%- endif -%}
+    {%- unless tags contains tag -%}
+      {%- assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
