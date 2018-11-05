@@ -3,7 +3,7 @@
   {%- assign page_paths = site.header_pages | default: default_paths -%}
 
   <a class="logo" rel="author" href="/">
-    <img src="{{- site.gravatarUrl -}}" alt="Photo of {{- site.author -}}" />
+    <img src="{{ site.gravatarUrl }}" alt="Photo of {{ site.author }}" />
     andrew<span>gunn;</span>
   </a>
   
@@ -17,7 +17,7 @@
       {%- assign my_page = site.pages | where: "path", path | first -%}
       {%- if my_page.title -%}
       <li>
-        <a href="{{- my_page.url | relative_url -}}">{{- my_page.title | escape -}}</a>
+        <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
       </li>
       {%- endif -%}
     {%- endfor -%}
@@ -37,7 +37,7 @@
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/{{- site.linkedInUsername -}}" target="_blank" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/{{ site.linkedInUsername }}" target="_blank" title="LinkedIn">
           <i class="fab fa-linkedin"></i>
           <span class="visually-hidden">LinkedIn</span>
         </a>

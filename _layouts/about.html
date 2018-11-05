@@ -4,28 +4,28 @@ layout: default
 
 <section class="about">
 	<div>
-		<h1>{{- page.title | escape -}}</h1>
-    	{{- content -}}
+		<h1>{{ page.title | escape }}</h1>
+    	{{ content }}
     </div>
 	<div>
-		<img src="{{- site.gravatarUrl -}}" alt="Photo of {{- site.author -}}" title="{{- site.author -}}" />
+		<img src="{{ site.gravatarUrl }}" alt="Photo of {{ site.author }}" title="{{ site.author }}" />
 		<ul class="social">
 	      <li>
 					<i class="fab fa-twitter"></i>
-	        <a href="https://twitter.com/{{- site.twitterUsername -}}" target="_blank" title="Twitter">
-						{{- site.twitterUsername -}}
+	        <a href="https://twitter.com/{{ site.twitterUsername }}" target="_blank" title="Twitter">
+						{{ site.twitterUsername }}
 	        </a>
 	      </li>
 	      <li>
 					<i class="fab fa-github"></i>
-	        <a href="https://github.com/{{- site.gitHubUsername -}}" target="_blank" title="GitHub">
-						{{- site.gitHubUsername -}}
+	        <a href="https://github.com/{{ site.gitHubUsername }}" target="_blank" title="GitHub">
+						{{ site.gitHubUsername }}
 	        </a>
 	      </li>
 	      <li>
 					<i class="fab fa-linkedin"></i>
-	        <a href="https://www.linkedin.com/in/{{- site.linkedInUsername -}}" target="_blank" title="LinkedIn">
-						{{- site.linkedInUsername -}}
+	        <a href="https://www.linkedin.com/in/{{ site.linkedInUsername }}" target="_blank" title="LinkedIn">
+						{{ site.linkedInUsername }}
 	        </a>
 	      </li>
     	</ul>

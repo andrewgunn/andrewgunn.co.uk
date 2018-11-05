@@ -3,11 +3,11 @@ layout: default
 ---
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <h1 itemprop="name headline">{{- page.title | escape -}}</h1>
+  <h1 itemprop="name headline">{{ page.title | escape }}</h1>
   <p class="meta">
     <i class="fal fa-calendar"></i>
-    <time datetime="{{- page.date | date_to_xmlschema -}}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}{{- page.date | date: date_format -}}
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}{{ page.date | date: date_format }}
     </time>
     <span>//</span>
     {%- include reading-time.html -%}
@@ -15,26 +15,25 @@ layout: default
       <br />
       <i class="fal fa-tags"></i>
       {%- for tag in page.tags -%}
-        {%- capture tag_name -%}
+        <a class="tag" href="/tags#tag-{{ tag | slugify }}">
           {{- tag -}}
-        {%- endcapture -%}
-        <a class="tag" href="/tags#tag-{{- tag_name -}}">{{- tag_name -}}</a>
+        </a>
       {%- endfor -%}
     {%- endif -%}
   </p>
 
   <div itemprop="articleBody">
-    {{- content -}}
+    {{ content }}
   </div>
 
-  <a href="{{- page.url | relative_url -}}" hidden></a>
+  <a href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
 <section class="post-footer">
   <div class="share-post">
     <p>
       Share this post...
-      <a href="https://twitter.com/intent/tweet?text=%22{{- page.title -}}%22%20by%20{{- site.author -}}%0a{{- page.url | absolute_url -}}" target="_blank" title="Share on Twitter">
+      <a href="https://twitter.com/intent/tweet?text=%22{{ page.title }}%22%20by%20{{ site.author }}%0a{{ page.url | absolute_url }}" target="_blank" title="Share on Twitter">
         <i class="fab fa-twitter"></i>
         <span class="visually-hidden">Twitter</span>
       </a>

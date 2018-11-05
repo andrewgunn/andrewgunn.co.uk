@@ -10,7 +10,7 @@
     {%- if tags == "" -%}
       {%- assign tags = tag | split:'|' -%}
     {%- endif -%}
-    {%- unless tags contains tag -%}
+    {%- unless tags contains tag -% }
       {%- assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' -%}
     {%- endunless -%}
   {%- endif -%}

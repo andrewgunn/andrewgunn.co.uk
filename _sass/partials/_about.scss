@@ -7,7 +7,7 @@
 section.about {
   display: grid;
   grid-template-areas: "content links";
-  grid-template-columns: 60% 35%;
+  grid-template-columns: 70% 25%;
   grid-template-rows: auto auto;
   grid-column-gap: 5%;
 
@@ -22,11 +22,9 @@ section.about {
     }
 
     &:last-of-type {
-      display: grid;
-      grid-area: links;
-      grid-column-gap: 10%;
-      grid-template-columns: 30% 60%;
-      margin-top: 1rem;
+	  grid-area: links;
+	  margin-top: 1rem;
+	  text-align: right;
 
       img {
         border-radius: 50%;
@@ -58,8 +56,8 @@ section.about {
 
     div {
       &:last-of-type {
-		display: block;
 		margin-top: 3rem;
+		text-align: left;
 
 		ul {
 		  font-size: 0.8rem;

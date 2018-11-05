@@ -8,31 +8,30 @@ layout: default
   {%- for post in site.posts -%}
   <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
     <h1>
-      <a href="{{- post.url | relative_url -}}">
-        {{- post.title | escape -}}
+      <a href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
       </a>
     </h1>
      <p class="meta">
       <i class="fal fa-calendar"></i> 
-      <time datetime="{{- post.date | date_to_xmlschema -}}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}{{- post.date | date: date_format -}}
+      <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}{{ post.date | date: date_format }}
       </time>
-      {%- if post.tags != empty -%}
-        <span>//</span>
-        <i class="fal fa-tags"></i>
-        {%- for tag in post.tags -%}
-          {%- capture tag_name -%}
-            {{- tag -}}
-          {%- endcapture -%}
-          <a class="tag" href="/tags#tag-{{- tag_name -}}">{{- tag_name -}}</a>
-        {%- endfor -%}
-      {%- endif -%}
       <span>//</span>
       {%- include reading-time.html -%}
+      {%- if post.tags != empty -%}
+        <br />
+        <i class="fal fa-tags"></i>
+        {%- for tag in post.tags -%}
+          <a class="tag" href="/tags#tag-{{ tag | slugify }}">
+            {{- tag -}}
+          </a>
+        {%- endfor -%}
+      {%- endif -%}
     </p>
 
     <div>
-        {{- post.content -}}
+        {{ post.content }}
     </div>
   </article>
   {%- endfor -%}
@@ -41,10 +40,10 @@ layout: default
 
 <nav id="pagenavi">
   {%- if paginator.previous_page -%}
-    <a href="{{- paginator.previous_page_path | replace: '//', '/' | replace: 'index.html', '' -}}" class="prev">Prev</a>
+    <a href="{{ paginator.previous_page_path | replace: '//', '/' | replace: 'index.html', '' }}" class="prev">Prev</a>
   {%- endif -%}
   {%- if paginator.next_page -%}
-    <a href="{{- paginator.next_page_path | replace: '//', '/' -}}" class="next">Next</a>
+    <a href="{{ paginator.next_page_path | replace: '//', '/' }}" class="next">Next</a>
   {%- endif -%}
   <div class="center"><a href="/archive">Blog Archive</a></div>
 </nav>
