@@ -34,21 +34,7 @@ article.post {
 .post-footer {
 	border-top: 1px solid $off-white;
 	display: grid;
-	grid-template-areas: "author share";
-	grid-template-columns: 70% 30%;
-	margin: 2rem 0;
-	padding-top: 1rem;
-
-	@media screen and (max-width: 768px) {
-		grid-template-areas: "share"
-							 "author";
-		grid-template-columns: auto;
-		grid-template-rows: auto auto;
-	}
-
-	h6 {
-		margin: 0;
-	}
+	padding: 1rem 0;
 
 	p {
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -61,10 +47,6 @@ article.post {
 		align-self: start;
 		grid-area: share;
 		justify-self: end;
-
-		p {
-			float: left;
-		}
 	}
 }
 

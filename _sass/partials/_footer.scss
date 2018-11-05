@@ -41,9 +41,12 @@ footer {
   @media screen and (max-width: 768px) {
     display: block;
 
-    p:last-child {
+    p {
+      text-align: left !important;
+    }
+
+    p:not(:first-child) {
       margin-top: 0.5rem;
-      text-align: left;
     }
   }
 }

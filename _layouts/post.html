@@ -9,8 +9,10 @@ layout: default
     <time datetime="{{- page.date | date_to_xmlschema -}}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}{{- page.date | date: date_format -}}
     </time>
+    <span>//</span>
+    {%- include reading-time.html -%}
     {%- if page.tags != empty -%}
-      <span>//</span>
+      <br />
       <i class="fal fa-tags"></i>
       {%- for tag in page.tags -%}
         {%- capture tag_name -%}
@@ -19,8 +21,6 @@ layout: default
         <a class="tag" href="/tags#tag-{{- tag_name -}}">{{- tag_name -}}</a>
       {%- endfor -%}
     {%- endif -%}
-    <span>//</span>
-    {%- include reading-time.html -%}
   </p>
 
   <div itemprop="articleBody">
