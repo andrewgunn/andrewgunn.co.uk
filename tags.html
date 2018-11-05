@@ -20,7 +20,7 @@ title: Tags
         {%- for post in tag[1] -%}
         <li>
           <a href="{{ post.url }}">
-            {{ post.title }}
+            {{- post.title -}}
           </a>
           <span class="meta">{%- include reading-time.html -%}</small>
         </li>
