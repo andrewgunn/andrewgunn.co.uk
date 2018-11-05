@@ -1,16 +1,33 @@
 title: Andrew Gunn's Blog
 author: Andrew Gunn
 
-gravatarUrl: https://s.gravatar.com/avatar/fb5ba768e87a4cb19517ca1b4a4251ac
-gitHubUsername:  andrewgunn
-linkedInUsername:  andrewgunnrazor
-twitterUsername: andrewgunn
+gravatar_url: https://s.gravatar.com/avatar/fb5ba768e87a4cb19517ca1b4a4251ac
+github_username:  andrewgunn
+linkedin_username:  andrewgunnrazor
+twitter_username: andrewgunn
 
-gitHubRepositoryUrl: https://github.com/andrewgunn/andrewgunn.co.uk
-googleAnalyticsTrackingId: 
+github_repository_url: https://github.com/andrewgunn/andrewgunn.co.uk
+google_analytics_tracking_id: 
 
-# Build settings
+# ***
+# 
+# Jekyll settings
+#
+# ***
+feed:
+  path: atom.xml
+
+paginate: 1
+paginate_path: "page/:num"
+permalink: /archive/:year/:month/:day/:title/
+
 markdown: kramdown
-theme: minima
+
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+sass:
+  sass_dir: _sass

@@ -7,13 +7,15 @@
     <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
   {%- endif -%}
 
+  
+	<link href="http://feeds.andrewgunn.co.uk/andrewgunn" rel="alternate" title="{{ site.title }}" type="application/atom+xml">
   <title>
-      {%- if page.title -%}
-        {{ page.title }} &middot; {{ site.title }}
-      {%- else -%}
-        {{ site.title }}
-      {%- endif -%}
-    </title>
+    {%- if page.title -%}
+      {{ page.title }} &middot; {{ site.title }}
+    {%- else -%}
+      {{ site.title }}
+    {%- endif -%}
+  </title>
 
   <link href="/favicon.ico" rel="shortcut icon">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}?{{ site.time | date: '%s%N' }}">
