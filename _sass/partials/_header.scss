@@ -16,7 +16,6 @@ header {
 
 .logo {
   color: $mid-grey;
-  font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
 
@@ -78,6 +77,12 @@ nav {
         float: right;
         margin-top: 0.35rem;
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    ul {
+      font-size: 0.8rem;
     }
   }
 }

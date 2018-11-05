@@ -60,6 +60,10 @@ section.about {
       &:last-of-type {
 		display: block;
 		margin-top: 3rem;
+
+		ul {
+		  font-size: 0.8rem;
+		}
       }
     }
   }
