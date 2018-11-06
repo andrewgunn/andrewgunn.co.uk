@@ -15,7 +15,7 @@ layout: default
       <br />
       <i class="fal fa-tags"></i>
       {%- for tag in page.tags -%}
-        <a class="tag" href="/tags#tag-{{ tag | slugify }}">
+        <a class="tag" href="/tags#{{ tag | slugify }}">
           {{- tag -}}
         </a>
       {%- endfor -%}
