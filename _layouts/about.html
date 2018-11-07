@@ -4,9 +4,12 @@ layout: default
 
 <section class="about">
 	<div>
-		<h1>{{ page.title | escape }}</h1>
-    	{{ content }}
-    </div>
+		<h1>
+			{{ page.title | escape }}
+		</h1>
+		
+		{{ content }}
+	</div>
 	<div>
 		<img src="{{ site.gravatar_url }}" alt="Photo of {{ site.author }}" title="{{ site.author }}" />
 		<ul class="social">

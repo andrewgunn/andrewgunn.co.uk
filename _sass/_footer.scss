@@ -28,6 +28,14 @@ footer {
     &:last-child {
       text-align: right;
     }
+
+    @media screen and (max-width: 768px) {
+      text-align: left !important;
+
+      &:not(:first-child) {
+        margin-top: 0.5rem;
+      }
+    }
   }
 
   svg {
@@ -40,14 +48,6 @@ footer {
 
   @media screen and (max-width: 768px) {
     display: block;
-    font-size: 0.8rem;
-
-    p {
-      text-align: left !important;
-    }
-
-    p:not(:first-child) {
-      margin-top: 0.5rem;
-    }
+    font-size: 0.85rem;
   }
 }

@@ -1,31 +1,57 @@
 ---
-layout: default
+layout: tags
 title: Tags
+nav: true
 ---
 
-<div>
-  <div>
-    <i class="fal fa-tags"></i>
-    {%- for tag in site.tags -%}
-      <a class="tag" href="#{{ tag[0] | slugify }}">
-        {{- tag[0] -}}
-      </a>
-    {%- endfor -%}
+{% assign tagCount = site.tags | size %}
+{%- if tagCount == 0 -%}
+  <h1>🤷</h1>
+{%- else -%}
+  <div class="meta">
+    <p>
+      <i class="fal fa-tags"></i>
+    </p>
+    <ul>
+      {%- for siteTag in site.tags -%}
+        <li>
+          <a class="tag" href="#{{ tag[0] | slugify }}">
+            {{- siteTag[0] -}}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
   </div>
   <hr />
   <div>
-    {%- for tag in site.tags -%}
-      <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+    {%- for siteTag in site.tags -%}
+      <h2 id="{{ siteTag[0] | slugify }}">{{ siteTag[0] }}</h2>
       <ul>
-        {%- for post in tag[1] -%}
+        {%- for tagPost in siteTag[1] -%}
         <li>
-          <a href="{{ post.url }}">
-            {{- post.title -}}
+          <a href="{{ tagPost.url }}">
+            {{- tagPost.title -}}
           </a>
-          <span class="meta">{%- include reading-time.html -%}</small>
+          <span class="meta">
+            {%- assign wordCount = tagPost.content | strip_html | number_of_words -%}
+              {%- assign minutes_f =  -%}
+            {%- assign minutes = wordCount | divided_by: 200 -%}
+            {%- if wordCount | divided_by: 200.0 | minus: minutes >= 0.5 -%}
+              {%- assign minutes = minutes + 1 -%}
+            {%- else -%}
+              {%- assign minutes = minutes -%}
+            {%- endif -%}
+
+            {%- if minutes <= 1 -%}
+              {%- assign readingTime = '1' | append: ' minute' -%}
+            {%- else -%}
+              {%- assign readingTime = minutes | append: ' minutes' -%}
+            {%- endif -%}
+            <i class="fal fa-clock"></i> {{ readingTime }}
+          </small>
         </li>
         {%- endfor -%}
       </ul>
     {%- endfor -%}
   </div>
-</div>
+{%- endif -%}

@@ -11,6 +11,7 @@ header {
 
   @media screen and (max-width: 768px) {
     display: block;
+    margin: 0.35rem 0.1rem 0;
   }
 }
 
@@ -33,6 +34,12 @@ header {
 
 nav {
   place-self: end;
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin-top: 0.5rem;
+  }
 
   ul {
     display: inline-block;
@@ -57,6 +64,12 @@ nav {
           text-decoration: underline;
         }
       }
+
+      &.active {
+        a {
+          font-weight: bold;
+        }
+      }
     }
 
     &.social {
@@ -74,15 +87,12 @@ nav {
       }
 
       @media screen and (max-width: 768px) {
-        float: right;
-        margin-top: 0.35rem;
+        text-align: right
       }
     }
-  }
 
-  @media screen and (max-width: 768px) {
-    ul {
-      font-size: 0.8rem;
+    @media screen and (max-width: 768px) {
+      font-size: 0.85rem;
     }
   }
 }

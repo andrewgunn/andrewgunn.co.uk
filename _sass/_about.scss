@@ -22,9 +22,9 @@ section.about {
     }
 
     &:last-of-type {
-	  grid-area: links;
-	  margin-top: 1rem;
-	  text-align: right;
+      grid-area: links;
+      margin-top: 1rem;
+      text-align: right;
 
       img {
         border-radius: 50%;
@@ -52,18 +52,17 @@ section.about {
 
   @media screen and (max-width: 768px) {
     display: block;
-	grid-template-areas: "links content";
+	  grid-template-areas: "links content";
 
     div {
       &:last-of-type {
-		margin-top: 3rem;
-		text-align: left;
+		    margin-top: 3rem;
+		    text-align: left;
 
-		ul {
-		  font-size: 0.8rem;
-		}
+        ul {
+          font-size: 0.85rem;
+        }
       }
     }
   }
 }
-

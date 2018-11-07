@@ -1,26 +1,30 @@
 <header role="banner">
-  {%- assign default_paths = site.pages | map: "path" -%}
-  {%- assign page_paths = site.header_pages | default: default_paths -%}
-
   <a class="logo" rel="author" href="/">
     <img src="{{ site.gravatar_url }}" alt="Photo of {{ site.author }}" />
     andrew<span>gunn;</span>
   </a>
   
-  {%- if page_paths -%}
   <nav>
     <ul>
-      <li>
+      {%- if page.url == "/" -%}
+        <li class="active">
+      {%- else -%}
+        <li>
+      {%- endif -%}
         <a href="/">Blog</a>
       </li>
-    {%- for path in page_paths -%}
-      {%- assign my_page = site.pages | where: "path", path | first -%}
-      {%- if my_page.title -%}
-      <li>
-        <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-      </li>
-      {%- endif -%}
-    {%- endfor -%}
+      {%- for sitePage in site.pages -%}
+        {%- if sitePage.nav -%}
+          {{sitePate.url}}
+          {%- if sitePage.url == page.url -%}
+            <li class="active">
+          {%- else -%}
+            <li>
+          {%- endif -%}
+            <a href="{{ sitePage.url | relative_url }}">{{ sitePage.title | escape }}</a>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
     </ul>
 
     <ul class="social">
@@ -44,5 +48,4 @@
       </li>
     </ul>
   </nav>
-  {%- endif -%}
 </header>

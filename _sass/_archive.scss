@@ -5,18 +5,17 @@
 // ***
 
 section.archive {
-  h1 {
-    margin: 0.5rem 0;
-    text-align: left;
-  }
-
   h2 {
     border-bottom: 1px solid $off-white;
   }
 
   .meta {
-    margin-top: 0;
-    text-align: left;
+    color: $light-grey;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 0.75rem;
+    
+    @media screen and (max-width: 768px) {
+      font-size: 0.85rem;
+    } 
   }
 }
-

@@ -4,23 +4,51 @@ layout: default
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <h1 itemprop="name headline">{{ page.title | escape }}</h1>
-  <p class="meta">
-    <i class="fal fa-calendar"></i>
-    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}{{ page.date | date: date_format }}
-    </time>
-    <span>//</span>
-    {%- include reading-time.html -%}
-    {%- if page.tags != empty -%}
-      <br />
+  <div class="meta">
+    <ul>
+      <li>
+        <i class="fal fa-calendar"></i> 
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}{{ page.date | date: date_format }}
+        </time>
+      </li>
+      <li>
+        <span>//</span>
+      </li>
+      <li>
+        {%- assign wordCount = tagpage.content | strip_html | number_of_words -%}
+          {%- assign minutes_f =  -%}
+        {%- assign minutes = wordCount | divided_by: 200 -%}
+        {%- if wordCount | divided_by: 200.0 | minus: minutes >= 0.5 -%}
+          {%- assign minutes = minutes + 1 -%}
+        {%- else -%}
+          {%- assign minutes = minutes -%}
+        {%- endif -%}
+
+        {%- if minutes <= 1 -%}
+          {%- assign readingTime = '1' | append: ' minute' -%}
+        {%- else -%}
+          {%- assign readingTime = minutes | append: ' minutes' -%}
+        {%- endif -%}
+        <i class="fal fa-clock"></i> {{ readingTime }}
+      </li>
+    </ul>
+  </div>
+
+  {%- if page.tags != empty -%}
+    <div class="meta">
       <i class="fal fa-tags"></i>
-      {%- for tag in page.tags -%}
-        <a class="tag" href="/tags#{{ tag | slugify }}">
-          {{- tag -}}
-        </a>
-      {%- endfor -%}
-    {%- endif -%}
-  </p>
+      <ul>
+        {%- for tag in page.tags -%}
+          <li>
+            <a class="tag" href="/tags#{{ tag | slugify }}">
+              {{- tag -}}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endif -%}
 
   <div itemprop="articleBody">
     {{ content }}
@@ -32,7 +60,7 @@ layout: default
 <section class="post-footer">
   <div class="share-post">
     <p>
-      Share this post...
+      Share this page...
       <a href="https://twitter.com/intent/tweet?text=%22{{ page.title }}%22%20by%20{{ site.author }}%0a{{ page.url | absolute_url }}" target="_blank" title="Share on Twitter">
         <i class="fab fa-twitter"></i>
         <span class="visually-hidden">Twitter</span>
