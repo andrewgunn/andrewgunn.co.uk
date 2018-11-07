@@ -26,21 +26,13 @@ nav: true
               {{- sitePost.title -}}
           </a>
           <span class="meta">
-            {%- assign wordCount = sitePost.content | strip_html | number_of_words -%}
-              {%- assign minutes_f =  -%}
-            {%- assign minutes = wordCount | divided_by: 200 -%}
-            {%- if wordCount | divided_by: 200.0 | minus: minutes >= 0.5 -%}
-              {%- assign minutes = minutes + 1 -%}
+            <i class="fal fa-clock"></i>&nbsp;
+            {%- assign words = sitePost.content | number_of_words -%}
+            {%- if words < 360 -%}
+              1 min
             {%- else -%}
-              {%- assign minutes = minutes -%}
+              {{ words | divided_by:180 }} mins
             {%- endif -%}
-
-            {%- if minutes <= 1 -%}
-              {%- assign readingTime = '1' | append: ' minute' -%}
-            {%- else -%}
-              {%- assign readingTime = minutes | append: ' minutes' -%}
-            {%- endif -%}
-            <i class="fal fa-clock"></i> {{ readingTime }}
           </small>
         </li>
         {%- if forloop.last -%}</ul>{%- endif -%}

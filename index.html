@@ -8,49 +8,41 @@ permalink: /
   {%- if postCount == 0 -%}
     <h1>🤷</h1>
   {%- else -%}
-    {%- for post in paginator.posts -%}
+    {%- for paginatorPost in paginator.posts -%}
       <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <h1>
-          <a href="{{ post.url | relative_url }}">
-            {{- post.title | escape -}}
+          <a href="{{ paginatorPost.url | relative_url }}">
+            {{- paginatorPost.title | escape -}}
           </a>
         </h1>
         <div class="meta">
           <ul>
             <li>
               <i class="fal fa-calendar"></i> 
-              <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-                {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}{{ post.date | date: date_format }}
+              <time datetime="{{ paginatorPost.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%-d %b %Y" -%}{{ paginatorPost.date | date: date_format }}
               </time>
             </li>
             <li>
               <span>//</span>
             </li>
             <li>
-              {%- assign wordCount = tagPost.content | strip_html | number_of_words -%}
-                {%- assign minutes_f =  -%}
-              {%- assign minutes = wordCount | divided_by: 200 -%}
-              {%- if wordCount | divided_by: 200.0 | minus: minutes >= 0.5 -%}
-                {%- assign minutes = minutes + 1 -%}
+              <i class="fal fa-clock"></i>&nbsp;
+              {%- assign words = paginatorPost.content | number_of_words -%}
+              {%- if words < 360 -%}
+                1 min
               {%- else -%}
-                {%- assign minutes = minutes -%}
+                {{ words | divided_by:180 }} mins
               {%- endif -%}
-    
-              {%- if minutes <= 1 -%}
-                {%- assign readingTime = '1' | append: ' minute' -%}
-              {%- else -%}
-                {%- assign readingTime = minutes | append: ' minutes' -%}
-              {%- endif -%}
-              <i class="fal fa-clock"></i> {{ readingTime }}
             </li>
           </ul>
         </div>
 
-        {%- if post.tags != empty -%}
+        {%- if paginatorPost.tags != empty -%}
           <div class="meta">
             <i class="fal fa-tags"></i>
             <ul>
-              {%- for tag in post.tags -%}
+              {%- for tag in paginatorPost.tags -%}
                 <li>
                   <a class="tag" href="/tags#{{ tag | slugify }}">
                     {{- tag -}}
@@ -62,7 +54,7 @@ permalink: /
         {%- endif -%}
         
         <div>
-            {{ post.content }}
+            {{ paginatorPost.content }}
         </div>
       </article>
     {%- endfor -%}
