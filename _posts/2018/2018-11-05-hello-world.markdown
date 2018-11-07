@@ -21,7 +21,7 @@ I've already got over 20 posts lined up. I'll be writing about everything [.NET 
 
 Any good blog deserves a design that's _on fleek_ but I'm rubbish at colouring in, which is why I asked [Sammi Walters](https://twitter.com/sammivvwalters), who also works at [Razor](https://www.razor.co.uk), to do her thang. As you can see, she's done me proud and I'm extremely grateful. Thanks, Sammeh.  
 
-Hopefully I've done enough to convince you that I'm I'll stay true it my promise, but only time will tell. 
+Hopefully I've done enough to convince you that I'm I'll stay true to my promise, but only time will tell. 
 
 Thanks for reading and I hope you come back for the next post. And the one after that. And the one after that. 
 
