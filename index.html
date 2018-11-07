@@ -1,6 +1,5 @@
 ---
 layout: default
-permalink: /
 ---
 
 <section class="home" itemscope itemtype="http://schema.org/Blog">
@@ -62,7 +61,7 @@ permalink: /
     <nav>
       <div>
         {%- if paginator.previous_page -%}
-          <a href="{{ paginator.previous_page_path | replace: '//', '/' | replace: 'index.html', '' }}" class="prev">
+          <a href="{{ paginator.previous_page_path | replace: '//', '/' | replace: 'index.html', '' }}">
             <i class="fal fa-arrow-left"></i>
             <span class="visually-hidden">Previous</span>
           </a>
@@ -73,7 +72,7 @@ permalink: /
       </div>
       <div>
         {%- if paginator.next_page -%}
-          <a href="{{ paginator.next_page_path | replace: '//', '/' }}" class="next">
+          <a href="{{ paginator.next_page_path | replace: '//', '/' }}">
             <i class="fal fa-arrow-right"></i>
             <span class="visually-hidden">Next</span>
           </a>

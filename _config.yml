@@ -17,7 +17,7 @@ google_analytics_tracking_id:
 feed:
   path: atom.xml
 
-paginate: 1
+paginate: 10
 paginate_path: "page/:num"
 permalink: /archive/:year/:month/:day/:title/
 

@@ -1,0 +1,11 @@
+---
+layout: post
+title: Test
+date: 2018-11-07 21:03:00 +0100
+---
+
+```js
+function test () {
+    console.log('yay');
+}
+```

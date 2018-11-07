@@ -2,9 +2,6 @@
 layout: post
 title: Hello World!
 date: 2018-11-05 21:06:00 +0100
-tags:
-- one
-- two
 ---
 
 So here we go again. Another ~~failed~~ attempt at restarting my blog. But will it last?
