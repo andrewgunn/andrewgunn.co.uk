@@ -52,7 +52,7 @@ layout: default
 <section class="post-footer">
   <div class="share-post">
     <p>
-      <a href="https://twitter.com/intent/tweet?text=%22{{ page.title }}%22%20by%20{{ site.author }}%0a{{ page.url | absolute_url }}" title="Share on Twitter">
+      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url | url_encode }}&hashtags={{ page.tags | join: ',' }}&via={{ site.twitter_username }}" title="Share on Twitter">
         Share on Twitter
       </a>
     </p>
