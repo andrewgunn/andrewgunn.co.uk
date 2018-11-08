@@ -8,7 +8,7 @@
 
 (function () {
     $(document).on('click', 'a', function (event) {
-        if (!new RegExp('/' + window.location.host + '/').test(this.href)) {
+        if (!new RegExp('/^https://' + window.location.host + '/').test(this.href)) {
         event.preventDefault();
         event.stopPropagation();
 

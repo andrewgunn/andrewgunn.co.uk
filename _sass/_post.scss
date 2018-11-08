@@ -67,5 +67,17 @@ article.post {
     align-self: start;
     grid-area: share;
     justify-self: end;
+
+    a {
+      text-decoration: none;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
   }
 }
