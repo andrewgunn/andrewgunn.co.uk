@@ -3,8 +3,7 @@ layout: default
 ---
 
 <section class="home" itemscope itemtype="http://schema.org/Blog">
-  {% assign postCount = paginator.posts | size %}
-  {%- if postCount == 0 -%}
+  {%- if paginator.posts.size == 0 -%}
     <h1>🤷</h1>
   {%- else -%}
     {%- for paginatorPost in paginator.posts -%}
@@ -41,10 +40,10 @@ layout: default
           <div class="meta">
             <i class="fal fa-tags"></i>
             <ul>
-              {%- for tag in paginatorPost.tags -%}
+              {%- for postTag in paginatorPost.tags -%}
                 <li>
-                  <a class="tag" href="/tags#{{ tag | slugify }}">
-                    {{- tag -}}
+                  <a class="tag" href="/tags#{{ postTag | slugify }}">
+                    {{- postTag -}}
                   </a>
                 </li>
               {%- endfor -%}

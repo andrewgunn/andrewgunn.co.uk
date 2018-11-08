@@ -4,8 +4,7 @@ title: Tags
 nav: true
 ---
 
-{% assign tagCount = site.tags | size %}
-{%- if tagCount == 0 -%}
+{%- if site.tags.size == 0 -%}
   <h1>🤷</h1>
 {%- else -%}
   <div class="meta">

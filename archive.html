@@ -4,9 +4,7 @@ title: Archive
 nav: true
 ---
 
-
-{% assign postCount = site.posts | size %}
-{%- if postCount == 0 -%}
+{%- if site.posts.size == 0 -%}
   <h1>🤷</h1>
 {%- else -%}
   <div itemscope itemtype="http://schema.org/Blog">
