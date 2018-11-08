@@ -2,13 +2,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   {%- if page.tags -%}
     <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
   {%- endif -%}
 
-  
-	<link href="http://feeds.andrewgunn.co.uk/andrewgunn" rel="alternate" title="{{ site.title }}" type="application/atom+xml">
   <title>
     {%- if page.title -%}
       {{ page.title }} &middot; {{ site.title }}
