@@ -16,7 +16,7 @@ In the past, I've spent more time focussing on the blogging platform than the co
 
 I've already got over 20 posts lined up. I'll be writing about everything [.NET Core](https://docs.microsoft.com/en-us/dotnet/core/), especially in relation to APIs, client-side libraries such as [Vue.js](https://vuejs.org), [Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/), [AppVeyor](https://www.appveyor.com), [Azure](https://azure.microsoft.com/en-gb/), essential developer tools, and most importantly, how to put them all together to make something wonderful. I'll also pay close attention to a firm favourite of mine... [IdentityServer](https://identityserver.io).
 
-Any good blog deserves a design that's _on fleek_ but I'm rubbish at colouring in, which is why I asked [Sammi Walters](https://twitter.com/sammivvwalters), who also works at [Razor](https://www.razor.co.uk), to do her thang. As you can see, she's done me proud and I'm extremely grateful. Thanks, Sammeh.  
+Any good blog deserves a design that's _on fleek_ but I'm rubbish at colouring in, which is why I asked [Sammi Walters](https://twitter.com/sammivvalters), who also works at [Razor](https://www.razor.co.uk), to do her thang. As you can see, she's done me proud and I'm extremely grateful. Thanks, Sammeh.  
 
 Hopefully I've done enough to convince you that I'm I'll stay true to my promise, but only time will tell. 
 
