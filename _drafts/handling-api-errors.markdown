@@ -15,9 +15,9 @@ tags:
 ```csharp
 public void Configure(IApplicationBuilder app)
 {
-    app.UseJsonExceptions();
+  app.UseJsonExceptions();
 
-    // ...
+  // ...
 }
 ```
 
@@ -34,14 +34,14 @@ using Autofac.Extensions.DependencyInjection;
 
 public IServiceProvider ConfigureServices(IServiceCollection services)
 {
-    // ...
+  // ...
 
-    var containerBuilder = new ContainerBuilder();
-    containerBuilder.AddExceptionHandlers();
-    containerBuilder.Populate(services);
+  var containerBuilder = new ContainerBuilder();
+  containerBuilder.AddExceptionHandlers();
+  containerBuilder.Populate(services);
 
-    var container = containerBuilder.Build();
+  var container = containerBuilder.Build();
 
-    return new AutofacServiceProvider(container);
+  return new AutofacServiceProvider(container);
 }
 ```

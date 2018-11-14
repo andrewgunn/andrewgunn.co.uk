@@ -81,9 +81,10 @@ blockquote{
   }
 }
 
-code {
+code.highlighter-rouge {
 	color: #c7254e;
   background: #f9f2f4;
   border-radius: 4px;
-	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 1.2;
 }
