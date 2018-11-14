@@ -38,7 +38,7 @@ Ensuring everyone speaks the same ubiqutous language is more crucial to the succ
 
 Luckily, I have the answer in the form of **Verby APIs** ([Tweet](https://twitter.com/intent/tweet?text=%40{{ site.twitter_username | url_encode }}%20Verby%20API%20is%20a%20rubbish%20name.%20You%20should%20call%20it...%20) me if you have a better name).
 
-Verby APIs only used two of most common HTTP Methods; `GET` for reading state and `POST` for changing state. Similar to how websites (should) work. The URLs follow a simple convention that will familiar to any [RESTafarian](https://en.wiktionary.org/wiki/RESTafarian):
+Verby APIs only use two of most common HTTP Methods; `GET` for reading state and `POST` for changing state which is similar to how websites (should) work. The URLs follow a simple convention that will familiar to any [RESTafarian](https://en.wiktionary.org/wiki/RESTafarian):
 
 ```yaml
  # Create a new user
@@ -54,6 +54,6 @@ Verby APIs only used two of most common HTTP Methods; `GET` for reading state an
 /users/1/update POST
 ```
 
-Hopefully you'll be able to see where the name comes from - every URL ends in a verb. Be creative but it's always good to have some common verbs to cover the basic (CRUD) operations; `CREATE`, `FIND`, `LIST`, `DELETE`, `UPDATE`. In terms of the URL structure before the verb, it's petty much RESTful in terms of a parent resource followed by an identifier or a child resource. Simples.
+Hopefully you'll be able to see where the name comes from - every URL ends in a verb. Be creative, but it's always good to have some common verbs to cover the basic (CRUD) operations; `CREATE`, `FIND`, `LIST`, `DELETE`, `UPDATE`. In terms of the URL structure before the verb, it's petty much RESTful in terms of a parent resource followed by an identifier or a child resource. Simples.
 
 You might be reading this thinking this is an outrageous idea, but ask yourself why you're so against it. I'd suggest telling me in the comments, but I haven't got round to adding them yet 😉. Verby APIs tie in really nicely with [CQS (Command Query Separataion)](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation) but I'll talk more about that in my next post.
