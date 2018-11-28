@@ -38,7 +38,7 @@ Ensuring everyone speaks the same ubiqutous language is more crucial to the succ
 
 Luckily, I have the answer in the form of **Verby APIs** ([Tweet](https://twitter.com/intent/tweet?text=%40{{ site.twitter_username | url_encode }}%20Verby%20API%20is%20a%20rubbish%20name.%20You%20should%20call%20it...%20) me if you have a better name).
 
-Verby APIs only use two of most common HTTP Methods; `GET` for reading state and `POST` for changing state which is similar to how websites (should) work. The URLs follow a simple convention that will familiar to any [RESTafarian](https://en.wiktionary.org/wiki/RESTafarian):
+Verby APIs only use two of most common HTTP Methods; `GET` for reading state and `POST` for changing state which is similar to how websites (should) work. The URLs follow a simple convention that will be familiar to any [RESTafarian](https://en.wiktionary.org/wiki/RESTafarian):
 
 ```yaml
  # Create a new user
