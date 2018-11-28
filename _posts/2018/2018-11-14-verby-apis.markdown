@@ -48,10 +48,10 @@ Verby APIs only use two of most common HTTP Methods; `GET` for reading state and
 /users/1/find   GET
 
 # Update a specific user
-/users/1/delete POST
+/users/1/update POST
 
 # Delete a specific user
-/users/1/update POST
+/users/1/delete POST
 ```
 
 Hopefully you'll be able to see where the name comes from - every URL ends in a verb. Be creative, but it's always good to have some common verbs to cover the basic (CRUD) operations; `CREATE`, `FIND`, `LIST`, `DELETE`, `UPDATE`. In terms of the URL structure before the verb, it's petty much RESTful in terms of a parent resource followed by an identifier or a child resource. Simples.
