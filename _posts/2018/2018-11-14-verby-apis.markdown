@@ -15,22 +15,22 @@ Here's a few RESTful contracts that follow the usual trend of using the HTTP Met
 /users   POST
 
 # Find a specific user
-/users/1  GET
+/users/:userId  GET
 
 # Update a specific user
-/users/1  PUT
+/users/:userId  PUT
 
 # Delete a specific user
-/users/1  DELETE
+/users/:userId  DELETE
 ```
 
-**C**reate, **R**ead, **U**pdate, **D**elete. **CRUD**. But what if we want to *[Clone](https://stackoverflow.com/questions/18755220/what-is-the-restful-way-to-represent-a-resource-clone-operation-in-the-url#answer-18755334)* a user? Or *[Block](https://developer.github.com/v3/users/blocking/#block-a-user)*/*[Unblock](https://developer.github.com/v3/users/blocking/#unblock-a-user)* them? Yes, there are "RESTful" ways to do this, but they all suck IMO. Let's take a closer look at some of the proposed solutions I've seen for cloning a user: 
+**C**reate, **R**ead, **U**pdate, **D**elete. **CRUD**. But what if we want to *[Clone](https://stackoverflow.com/questions/:userId8755220/what-is-the-restful-way-to-represent-a-resource-clone-operation-in-the-url#answer-18755334)* a user? Or *[Block](https://developer.github.com/v3/users/blocking/#block-a-user)*/*[Unblock](https://developer.github.com/v3/users/blocking/#unblock-a-user)* them? Yes, there are "RESTful" ways to do this, but they all suck IMO. Let's take a closer look at some of the proposed solutions I've seen for cloning a user: 
 
 - Custom HTTP Method
 - Special header as part of a PUT request
 - Query string argument (pointing to the original resource) as part of a POST request
 
-...but my particular favourite is creating a fake child resource to house the clones (e.g. `users/1/clones`). Really? And all because we want to be RESTful!
+...but my particular favourite is creating a fake child resource to house the clones (e.g. `users/:userId/clones`). Really? And all because we want to be RESTful!
 
 My point is that you'll spend unnecessary time trying to convert business rules into a CRUD pattern just for the sake of it. It reminds me when [ASP.NET MVC 1.0](https://en.wikipedia.org/wiki/ASP.NET_MVC) was released and everyone (including myself) was on the N-Tier bandwagon after reading about [NerdDinner](http://www.wrox.com/WileyCDA/WroxTitle/Professional-ASP-NET-MVC-2.productCd-0470643188.html). We blindly abstracted an abstraction in the form of `IRepository<T>` that gave us a warm feeling inside, only to realise that it was ultimately a waste of time (but that's for another blog post).
 
@@ -45,13 +45,13 @@ Verby APIs only use two of most common HTTP Methods; `GET` for reading state and
 /users/create   POST
 
 # Find a specific user
-/users/1/find   GET
+/users/:userId/find   GET
 
 # Update a specific user
-/users/1/update POST
+/users/:userId/update POST
 
 # Delete a specific user
-/users/1/delete POST
+/users/:userId/delete POST
 ```
 
 Hopefully you'll be able to see where the name comes from - every URL ends in a verb. Be creative, but it's always good to have some common verbs to cover the basic (CRUD) operations; `CREATE`, `FIND`, `LIST`, `DELETE`, `UPDATE`. In terms of the URL structure before the verb, it's petty much RESTful in terms of a parent resource followed by an identifier or a child resource. Simples.
