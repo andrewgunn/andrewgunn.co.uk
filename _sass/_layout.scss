@@ -1,4 +1,5 @@
 body {
+  background-color: #FCFBF7;
   display: grid;
   grid-template-areas: "header"
                        "main"
@@ -16,7 +17,7 @@ header {
 main {
   grid-area: main;
   margin: 0 auto;
-  max-width: 40rem;
+  max-width: 800px;
   padding: 1rem 1rem 3rem;
   width: 100%;
 
