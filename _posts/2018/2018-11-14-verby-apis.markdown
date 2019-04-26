@@ -54,6 +54,8 @@ Verby APIs only use two of most common HTTP Methods; `GET` for reading state and
 /users/:userId/delete POST
 ```
 
-Hopefully you'll be able to see where the name comes from - every URL ends in a verb. Be creative, but it's always good to have some common verbs to cover the basic (CRUD) operations; `CREATE`, `FIND`, `LIST`, `DELETE`, `UPDATE`. In terms of the URL structure before the verb, it's petty much RESTful in terms of a parent resource followed by an identifier or a child resource. Simples.
+Hopefully you'll be able to see where the name comes from - every URL ends in a verb. Be creative, but it's always good to have some common verbs to cover the basic (CRUD) operations; `CREATE`, `FIND`, `LIST`, `DELETE`, `UPDATE`. In terms of the URL structure before the verb, it's petty much RESTful with a parent resource followed by an identifier and any optional child resource. Simples.
 
-You might be reading this thinking this is an outrageous idea, but ask yourself why you're so against it. I'd suggest telling me in the comments, but I haven't got round to adding them yet 😉. Verby APIs tie in really nicely with [CQS (Command Query Separataion)](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation) but I'll talk more about that in my next post.
+You might be reading thinking this is an outrageous idea, but ask yourself why you're so against it. I'd suggest telling me in the comments, but I haven't got round to adding them yet 😉.
+
+Verby APIs tie in really nicely with [CQS (Command Query Separataion)](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation) but I'll talk more about that in my next post.
