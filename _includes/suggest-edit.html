@@ -1,7 +1,0 @@
-{%- if post.url -%}
-  {%- assign path = post.path -%}
-{%- else -%}
-  {%- assign path = page.path -%}
-{%- endif -%}
-
-<i class="fal fa-edit"></i> <a href="{{ site.github_repository_url }}/edit/master/{{ path }}">Suggest edit</a>

@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: https://andrewgunn.co.uk/sitemap.xml 
