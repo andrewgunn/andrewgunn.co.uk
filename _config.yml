@@ -1,0 +1,16 @@
+gravatar_url: https://s.gravatar.com/avatar/fb5ba768e87a4cb19517ca1b4a4251ac
+github_repository_url: "github_repository_url"
+github_username: "andrewgunn"
+google_analytics_tracking_id: "UA-129007023-1"
+linkedin_username: "helloandrewgunn"
+title: "Andrew Gunn's Blog"
+paginate: 10
+paginate_path: "page/:num"
+permalink: /:year/:month/:day/:title/
+url: "https://www.andrewgunn.co.uk"
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap

@@ -1,0 +1,48 @@
+.post {
+  h1 {
+    margin: 0.5rem 0;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  .h2,
+  .h3,
+  .h4,
+  .h5 {
+    margin: 1.5rem 0 0;
+  }
+
+  img {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  figure {
+    margin: 1.5rem auto;
+  }
+
+  .meta {
+    margin-top: 1rem;
+    text-align: center;
+
+    span {
+      color: $mid-blue;
+    }
+
+    ul {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 0.25rem;
+      }
+    }
+  }
+}
