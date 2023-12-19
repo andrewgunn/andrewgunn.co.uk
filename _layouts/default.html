@@ -56,7 +56,10 @@
 </head>
 
 <body>
-    {% include header.html %}
+    <header role="banner">
+        <a class="logo" rel="author" href="/"><img src="{{ site.gravatar_url }}" alt="{{ site.author }}" title="{{ site.author }}" /> andrew<span>gunn;</span>
+        </a>
+    </header>
 
     <main aria-label="Content">
         {{ content }}

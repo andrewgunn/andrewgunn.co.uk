@@ -3,72 +3,56 @@ layout: default
 ---
 <section class="posts" itemscope itemtype="http://schema.org/Blog">
     {% if paginator.posts.size == 0 %}
-    <h2>No posts found</h2>
+        <h2>No posts found</h2>
     {% else %}
-    {% for post in paginator.posts %}
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-        <h1>
-            <a href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-            </a>
-        </h1>
-        <div class="meta">
-            <ul>
-                <li>
-                    <i class="fa-regular fa-calendar"></i>
-                    <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-                        {% assign date_format = site.minima.date_format | default: "%d %b %Y" %}{{ post.date | date:
-                        date_format }}
-                    </time>
-                </li>
-                <li>
-                    <span>//</span>
-                </li>
-                <li>
-                    <i class="fa-regular fa-clock"></i>&nbsp;
-                    {% assign words = post.content | number_of_words %}
-                    {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} </li>
-            </ul>
-        </div>
-
-        {% if post.tags != empty %}
-        <div class="meta">
-            <i class="fa-solid fa-tags"></i>
-            <ul>
-                {% for tag in post.tags %}
-                <li>
-                    <a class="tag" href="/tags#{{ tag | slugify }}">
-                        {{ tag }}
+        {% for post in paginator.posts %}
+            <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+                <h1>
+                    <a href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
                     </a>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
+                </h1>
+                <div class="meta">
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-calendar"></i>
+                            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+                                {% assign date_format = site.minima.date_format | default: "%d %b %Y" %}{{ post.date | date:
+                                date_format }}
+                            </time>
+                        </li>
+                    </ul>
+                </div>
 
-        <div>
-            <a href="{{ post.url | relative_url }}" class="excerpt">
-                {{ post.excerpt }}
-            </a>
-        </div>
-    </article>
-    {% endfor %}
+                {% if post.tags != empty %}
+                    <div class="meta">
+                        <i class="fa-solid fa-tags"></i>
+                        <ul>
+                            {% for tag in post.tags %}
+                            <li>
+                                <a class="tag" href="/tags#{{ tag | slugify }}">
+                                    {{ tag }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
 
-    <nav>
-        <div>
-            {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path | replace: '//', '/' | replace: 'index.html', '' }}">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </a>
-            {% endif %}
-        </div>
-        <div>
-            {% if paginator.next_page %}
+                <div>
+                    <a href="{{ post.url | relative_url }}" class="excerpt">
+                        {{ post.excerpt }}
+                    </a>
+                </div>
+            </article>
+        {% endfor %}
+
+        {% if paginator.next_page %}
+            <nav>
                 <a href="{{ paginator.next_page_path | replace: '//', '/' }}">
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
-            {% endif %}
-        </div>
-    </nav>
+            </nav>
+        {% endif %}
     {% endif %}
 </section>

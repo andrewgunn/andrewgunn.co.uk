@@ -12,13 +12,6 @@ layout: default
                     date_format }}
                 </time>
             </li>
-            <li>
-                &nbsp;
-            </li>
-            <li>
-                <i class="fa-regular fa-clock"></i>&nbsp;
-                {% assign words = page.content | number_of_words %}
-                {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} </li>
         </ul>
     </div>
 
